@@ -1,0 +1,8 @@
+on:
+  pull_request_target:
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04-firewall
+    steps:
+      - run: Test ${{ github.event.pull_request.body }}
